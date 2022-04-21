@@ -9,6 +9,9 @@ import helmet from 'helmet'
 // Route Import
 import userRoute from './modules/user/user.route'
 import authRoute from './modules/auth/auth.route'
+import videoRoute from './modules/videos/video.route'
+
+// Custom Middleware
 import deserializeUser from './middleware/deserializeUser'
 
 const PORT = process.env.PORT || 4000
@@ -29,6 +32,7 @@ app.use(deserializeUser)
 // API Route
 app.use('/api/users', userRoute)
 app.use('/api/auth', authRoute)
+app.use('/api/videos', videoRoute)
 
 const server = app.listen(PORT, async () => {
   await connectToDatabase()
