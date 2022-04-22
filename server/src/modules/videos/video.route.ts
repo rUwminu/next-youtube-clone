@@ -4,11 +4,13 @@ import {
   updateVideoHandler,
   uploadVideoHandler,
   findAllVideosHandler,
+  steamVideoHandler,
 } from './video.controller'
 
 const router = express.Router()
 
 router.get('/', findAllVideosHandler)
+router.get('/:videoId', steamVideoHandler)
 router.post('/', requireUser, uploadVideoHandler)
 router.patch('/:videoId', requireUser, updateVideoHandler)
 
