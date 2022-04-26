@@ -8,3 +8,16 @@ export interface Me {
   email: string
   username: string
 }
+
+export interface Video {
+  _id: string
+  title: string
+  description: string
+  published: boolean
+  owner: string
+  videoId: string
+  extension: string
+  createdAt: Date
+  updatedAt: Date
+  __v: number
+}

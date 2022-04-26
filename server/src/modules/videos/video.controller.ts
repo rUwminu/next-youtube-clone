@@ -132,7 +132,7 @@ export async function steamVideoHandler(req: Request, res: Response) {
     'Accept-Ranges': 'bytes',
     'Content-length': contentLength,
     'Content-type': `video/${video.extension}`,
-    'Cross-Origin_Resource-Policy': 'cross-origin',
+    'Cross-Origin-Resource-Policy': 'cross-origin',
   }
 
   res.writeHead(StatusCodes.PARTIAL_CONTENT, headers)
